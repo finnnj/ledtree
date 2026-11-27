@@ -1,6 +1,7 @@
-import board
-import neopixel
+import time
+import ledtree as lt
 
 
-NUM_PIXELS = 200
-pixels = neopixel.NeoPixel(board.D18, NUM_PIXELS, brightness=0.6, auto_write=False)
+ledtree = lt.LEDTree()
+
+
