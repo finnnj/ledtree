@@ -16,4 +16,4 @@ class LEDTree:
 
 
     def randfill(self):
-        self.fill(random.randrange(256), random.randrange(256), random.randrange(256), random.randrange(256))
+        self.fill(255, 0, 0, 0)
