@@ -7,13 +7,13 @@ import neopixel
 
 class LEDTree:
     def __init__(self, num_pixels=200):
-        self.pixels = neopixel.NeoPixel(board.D18, num_pixels, brightness=0.6, auto_write=False)
+        self.pixels = neopixel.NeoPixel(board.D18, num_pixels, brightness=0.6, auto_write=False, pixel_order=neopixel.RGBW)
 
 
-    def fill(self, hue, sat, val):
-        rgb = colorsys.hsv_to_rgb(hue, sat, val)
-        self.pixels.fill(rgb)
+    def fill(self, red, green, blue, white):
+        self.pixels.fill((red, green, blue, white))
+        self.pixels.show()
 
 
     def randfill(self):
-        self.pixels.fill(random.random(), random.random(), random.random())
+        self.fill(random.randrange(256), random.randrange(256), random.randrange(256), random.randrange(256))
