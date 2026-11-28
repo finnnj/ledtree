@@ -5,4 +5,4 @@ import ledtree as lt
 ledtree = lt.LEDTree()
 
 
-ledtree.randfill()
+ledtree.fill(255, 0, 0)
